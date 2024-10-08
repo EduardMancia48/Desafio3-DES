@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Desafio3_DM201736_DV201086_PC191777.Migrations
 {
     [DbContext(typeof(RecetaDBContext))]
-    [Migration("20241008165627_InitialIdentityMigration")]
-    partial class InitialIdentityMigration
+    [Migration("20241008204846_inicio46")]
+    partial class inicio46
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

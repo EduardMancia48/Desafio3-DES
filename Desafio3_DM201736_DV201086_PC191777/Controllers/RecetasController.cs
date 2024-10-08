@@ -47,6 +47,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // PUT: api/Recetas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> PutReceta(int id, Receta receta)
         {
             if (id != receta.Id)
@@ -78,6 +79,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // POST: api/Recetas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public async Task<ActionResult<Receta>> PostReceta(Receta receta)
         {
             _context.Recetas.Add(receta);
@@ -87,7 +89,10 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         }
 
         // DELETE: api/Recetas/5
+  
+
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> DeleteReceta(int id)
         {
             var receta = await _context.Recetas.FindAsync(id);

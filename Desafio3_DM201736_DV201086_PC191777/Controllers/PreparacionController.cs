@@ -48,6 +48,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // PUT: api/Preparacion/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> PutPreparacion(int id, Preparacion preparacion)
         {
             if (id != preparacion.Id)
@@ -79,6 +80,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // POST: api/Preparacion
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public async Task<ActionResult<Preparacion>> PostPreparacion(Preparacion preparacion)
         {
             _context.Preparaciones.Add(preparacion);
@@ -89,6 +91,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
 
         // DELETE: api/Preparacion/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> DeletePreparacion(int id)
         {
             var preparacion = await _context.Preparaciones.FindAsync(id);

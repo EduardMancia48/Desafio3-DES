@@ -261,3 +261,4 @@ C:\Users\eduar\source\repos\Desafio3_DM201736_DV201086_PC191777\Desafio3_DM20173
 C:\Users\eduar\source\repos\Desafio3_DM201736_DV201086_PC191777\Desafio3_DM201736_DV201086_PC191777\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\eduar\source\repos\Desafio3_DM201736_DV201086_PC191777\Desafio3_DM201736_DV201086_PC191777\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\eduar\source\repos\Desafio3_DM201736_DV201086_PC191777\Desafio3_DM201736_DV201086_PC191777\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\eduar\source\repos\Desafio3_DM201736_DV201086_PC191777\Desafio3_DM201736_DV201086_PC191777\obj\Debug\net8.0\Desafio3_DM201736_DV201086_PC191777.sourcelink.json

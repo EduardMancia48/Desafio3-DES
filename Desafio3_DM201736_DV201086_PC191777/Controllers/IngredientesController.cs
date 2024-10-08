@@ -48,6 +48,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // PUT: api/Ingredientes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> PutIngrediente(int id, Ingrediente ingrediente)
         {
             if (id != ingrediente.Id)
@@ -79,6 +80,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         // POST: api/Ingredientes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public async Task<ActionResult<Ingrediente>> PostIngrediente(Ingrediente ingrediente)
         {
             _context.Ingredientes.Add(ingrediente);
@@ -89,6 +91,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
 
         // DELETE: api/Ingredientes/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> DeleteIngrediente(int id)
         {
             var ingrediente = await _context.Ingredientes.FindAsync(id);
