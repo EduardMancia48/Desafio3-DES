@@ -19,7 +19,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         }
 
         // Acción para crear un nuevo rol
-        // [Authorize(Roles = "Administrador")]
+    
         [HttpPost("crear")]
         public async Task<IActionResult> CrearRol([FromBody] NombreRol modelo)
         {
@@ -45,7 +45,7 @@ namespace Desafio3_DM201736_DV201086_PC191777.Controllers
         }
 
         // Acción para asignar un rol a un usuario existente
-        // [Authorize(Roles = "Administrador")]
+
         [HttpPost("asignar")]
         public async Task<IActionResult> AsignarRol([FromBody] Roles modelo)
         {

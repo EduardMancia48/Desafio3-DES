@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Desafio3_DM201736_DV201086_PC191777.Migrations
 {
     [DbContext(typeof(RecetaDBContext))]
-    [Migration("20241008202223_inicio")]
+    [Migration("20241011044712_inicio")]
     partial class inicio
     {
         /// <inheritdoc />
