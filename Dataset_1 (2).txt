@@ -1,0 +1,20 @@
+SELECT
+  Recetas.Id AS [Recetas Id]
+  ,Recetas.Nombre AS [Recetas Nombre]
+  ,Recetas.Descripcion AS [Recetas Descripcion]
+  ,Recetas.TiempoPreparacion
+  ,Preparaciones.Id AS [Preparaciones Id]
+  ,Preparaciones.Descripcion AS [Preparaciones Descripcion]
+  ,Preparaciones.StepOrder
+  ,Preparaciones.RecetaId AS [Preparaciones RecetaId]
+  ,Ingredientes.Id AS [Ingredientes Id]
+  ,Ingredientes.Nombre AS [Ingredientes Nombre]
+  ,Ingredientes.Cantidad
+  ,Ingredientes.Unidad
+  ,Ingredientes.RecetaId AS [Ingredientes RecetaId]
+FROM
+  Recetas
+  INNER JOIN Preparaciones
+    ON Recetas.Id = Preparaciones.RecetaId
+  INNER JOIN Ingredientes
+    ON Recetas.Id = Ingredientes.RecetaId
